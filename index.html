@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/Logo-test.png" type="image/png">
+    <title>Bamboozled</title>
+</head>
+<body id="body">
+    <!-- Navbar section -->
+    <nav data-aos="fade-down" class="navbar open">
+        <div class="brand-title">Bamboozled</div>
+        <a href="#" onclick="dropDown()" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#problem">The problem</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Header section -->
+    <div  class="header-container lax lax_preset_slideY:855:207">
+        <div class="heading">
+            <h1 data-aos="fade-right" id="page-title">Bamboozled</h1>
+            <h3 data-aos="fade-right" data-aos-delay="100" id="page-slogan">Bamboo, good for them and good for you.</h3>
+        </div>
+    </div>
+    <i id="up" class="fa-solid fa-circle-arrow-up fa-2xl" onclick="scrollUp()"></i>
+    <!-- The problem section -->
+    <div id="problem" class="prblm-container">
+        <div data-aos="fade-right" class="text-wrapper">
+            <h3 class="text-title">The problem</h3>
+            <p class="text">The problem we’re talking about is fast fashion. Fast fashion are clothes that get produced as fast and cheap as possible. The problem is that the process causes a lot of pollution and toxic water that gets dumped into the sea. The amount of CO2 that gets released is enormous. With every KG textile, 10 KG CO2 gets released in the air. Every year 79 billion cubic meters fresh water gets used during the production of clothes.
+              We, Bamboozled try to reduce these horrible numbers by convincing companies to use bamboo. Bamboo uses less water and CO2 during production.</p>
+            <button>Donate here</button>
+        </div>
+        <img src="images/image2.jpg" alt="Image of Plastic waste">    
+    </div>
+    <!-- About us section -->
+    <div id="about" class="about-container">
+        <div data-aos="fade-right" class="text-wrapper-about">
+            <h3 class="text-title">About us</h3>
+            <p class="text">As many of you know, fast fashion is a big problem in the world. Our orginasation, bamboozled, was founded because we were so shocked and wanted to take action. Within the clothing industry, big mistakes are made for example: the spieces of plants that are being used. We want to solve these problems for a better environment.</p>
+            <button onclick="scrollDown()">Contact us</button>
+        </div>
+        <img src="images/chuttersnap-BofgeVFG-_w-unsplash.jpg" alt="Image of Plastic waste">
+    </div>
+    <div id="contact" class="contact-wrapper">
+        <h2>Contact us:</h2>
+        <input class="email" placeholder="Put your email here." type="text">
+        <textarea rows = "5" cols = "10" name = "description"> </textarea><br>
+        <button>Submit</button>
+        <p>Made by Ivar van den Bosch ©</p>
+    </div>
+    <script>
+        window.onload = function () {
+          lax.init()
+      
+          // Add a driver that we use to control our animations
+          lax.addDriver('scrollY', function () {
+            return window.scrollY
+          })
+      
+          // Add animation bindings to elements
+          lax.addElements('.selector', {
+            scrollY: {
+              translateX: [
+                ["elInY", "elCenterY", "elOutY"],
+                [0, 'screenWidth/2', 'screenWidth'],
+              ]
+            }
+          })
+        }
+      </script>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<Script src="app.js"></Script>
+</html>
